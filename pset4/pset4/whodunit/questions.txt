@@ -1,0 +1,28 @@
+1.  stdint.h is a header file in the C standard library introduced in the C99 standard library section 7.18 to
+allow programmers to write more portable code by providing a set of typedefs that specify exact-width integer types, 
+together with the defined minimum and maximum allowable values for each type, using macros.
+
+2.  It helps us avoid to using unnecessary bytes. Also we can define variables that cannot be lesser than 0 with unsigned(for ex: uint8_t)
+specifier, so it helps us to avoid wrong signed variables.
+
+3.  BYTE > 1, DWORD > 4, LONG > 4, WORD 2
+
+4.  The first 2 bytes of the BMP file format are the character "B" then the character "M" in ASCII encoding.
+
+5.  bfSize is The size of the bitmap file in bytes
+    biSize is the number of bytes required by the structure in bitmapinfoheader structure
+    
+6.  The bitmap is a top-down DIB and its origin is the upper-left corner.
+
+7.  biBitCount
+
+8.  File format might not be a bitmap file.
+
+9.  Because it should read the file one pixel by one pixel.
+
+10. 3
+
+11. fseek allows us to change the location of the file position indicator. If there is padding, it changes the location of the file 
+position indicator by adding padding size.
+
+12. current location of the file position indicator 
