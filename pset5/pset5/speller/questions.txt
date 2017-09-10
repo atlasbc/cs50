@@ -1,0 +1,30 @@
+0.  a lung disease caused by inhaling very fine ash and sand dust
+1.  getrusage() returns resource usage measures for RUSAGE_SELF, RUSAGE_CHILDREN AND RUSAGE_THREAD
+2.  16
+3.  We are calculating time. With pointers we are faster to calculate time. If we do it without pointers, that means we use copy(passing a variable by copy). 
+Copying a value cost us extra time and byte so pointer(means passing variable by reference) is more efficient and reasonable.
+
+4.  First it checks whether command line takes 2 or 3 arguments. if there is a specific dictionary, takes dictionary as argv[1] 
+else it takes dictionary as default one. Loads dictionary, if it can't be done, then gives error 1. if there is three argument text file is third argument 
+else text file is second argument. Opens text file read mode. If it is can not be open, gives error 2.
+
+Prints MISSPELLED WORDS to terminal window. index = 0 is for tracking word's letters. misspellings = 0 is for initializating misspelled words.
+words = 0 is for tracking words. LENGTH is a constraint for word's length. In for loop, it takes text's one character until end of the file. 
+
+First if condition >>> allows only alphabetical chars and apostrophes. If it is true, append character to word[index] array. Then it checks word's length
+with index. If it is illegally long, consumes word's remainder letters. For this, it checks end of the file and alphabetical letters with isalpha(c). A word ends with "space" or this like symbol. After
+it finds space, makes index = 0 for a new word.
+
+Second if condition (else if (isdigit(c))) >>> ignores words with numbers. For this, it checks end of the file and alphabetical letters and numbers with isalnum(c). A word ends with "space" or this like symbol. After
+it finds space, makes index = 0 for a new word.
+
+Third if condition (else if (index > 0)) >>> This means we find a word that pass other conditions. This means we encountered "space" or this like symbol while we have
+index > 0. In order to take word as a string, we make word[index] = '\0'; and we update encountered word numbers. Then we check the word 
+whether it is misspelled or not. if it is a misspelled word, we print that word to terminal window and increase the misspelled word counters.
+With index = 0 argument, we prepare for the next word.
+
+5.  Because in .txt fileformat, we must specify a string format. We can't do that because in txt files words have different lengths. If we 
+use fscanf we can not obtain whole numbers or we use extra bytes that not been used for some words. Using fscanf can cause buffer overflow.
+We can control string length's legality with fgetc. 
+
+6.  It is like security word. We use constant because we don't want to check and load change the input variables by accident. 
